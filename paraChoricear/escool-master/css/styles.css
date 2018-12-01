@@ -1,0 +1,208 @@
+body {
+    font-family: 'Lato';
+    background-color: #ede9ce;
+}
+
+#mainNav {
+    font-weight: 700;
+}
+
+#mainNav .navbar-brand {
+    color: #ede9ce;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link {
+    color: #ede9ce;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+    color: #935347;
+}
+
+#mainNav .navbar-toggler {
+    font-size: 80%;
+    padding: 0.8rem;
+}
+
+#mainNav button {
+    background-color: #935347;
+}
+
+/* index.php styles */
+
+#queesescool {
+    background-color:  #ede9ce;
+    overflow: hidden;
+}
+
+
+/* .
+acá estaba intentando que los h4 queden todos de la misma altura y el texto centrado verticalmente, todavía no lo logré
+
+queesescool-elemento h4 {
+    display: block;
+    min-height:100px;
+    display: inline;
+    vertical-align: middle;
+}
+
+*/
+
+#clientes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #ede9ce;
+    margin-bottom: 25px;
+}
+
+#clientes img {
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+}
+
+#clientes article :hover {
+    width: 200px;
+    height: 200px;
+}
+
+#contactanos {
+    padding-top: 10px;
+    padding-bottom: 50px;
+    background-color: #c7ad88;
+}
+
+#contactanos img {
+    width: 40px;
+    height: 40px;
+}
+
+#footer {
+    background-color: #64706c;
+}
+
+#footer img {
+    width: 20px;
+    height: 20px;
+}
+
+/* faq.php styles */
+
+.faqTitle {
+    font-size: 27px;
+    margin: 20px;
+}
+
+.questions {
+    background-color: #c7ad88;
+}
+
+.questions a {
+    color: #935347;
+}
+
+.questions a:hover {
+    color: #64706c;
+    text-decoration: none;
+}
+
+.answers {
+    background-color: #ede9ce;
+}
+
+.answers .card-block {
+    padding: 20px;
+}
+
+/* login.php styles */
+
+/* register.php styles */
+
+/* alumno.php styles - Esto es lo que encontré POR AHORA para que el contenido del div central pueda cambiar con los clicks en la navbar */
+
+.avatar {
+  float: right;
+  width: 5%;
+}
+.avatar img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.blogShort{ border-bottom:1px solid #ddd;}
+
+.nav-sidebar {
+    float: left;
+    width: 100%;
+    padding: 30px 0;
+    /* border-right: 1px solid #ddd; */
+    padding-top: 10px;
+}
+.nav-sidebar li{
+  margin-bottom: 1%;
+  width: 100%;
+}
+.nav-sidebar a {
+    color: #333;
+    -webkit-transition: all 0.08s linear;
+    -moz-transition: all 0.08s linear;
+    -o-transition: all 0.08s linear;
+    transition: all 0.08s linear;
+}
+.nav-sidebar .active a {
+    cursor: default;
+    background-color: #0b56a8;
+    color: #fff;
+}
+.nav-sidebar .active a:hover {
+    background-color: #E50000;
+}
+.nav-sidebar .text-overflow a,
+.nav-sidebar .text-overflow .media-body {
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.tab-content{
+overflow: hidden;
+padding: 10px;
+}
+.reset{
+margin: 0 !important;
+padding: 0 !important;
+}
+.btn-blog {
+    color: #ffffff;
+    background-color: #E50000;
+    border-color: #E50000;
+    border-radius:0;
+    margin-bottom:10px
+}
+.btn-blog:hover,
+.btn-blog:focus,
+.btn-blog:active,
+.btn-blog.active,
+.open .dropdown-toggle.btn-blog {
+    color: white;
+    background-color:#0b56a8;
+    border-color: #0b56a8;
+}
+article h2{color:#333333;}
+h2{color:#0b56a8;}
+ .margin10{margin-bottom:10px; margin-right:10px;}
+
+ .container .text-style
+{
+  text-align: justify;
+  line-height: 23px;
+  margin: 0 13px 0 0;
+  font-size: 19px;
+}
+
+.navtabs li {
+    display: block;
+    width:100%;
+}
