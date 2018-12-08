@@ -38,7 +38,7 @@ public function genre()
 
 public function role()
 {
-  return $this->hasOne(Role::class, "id");
+  return $this->belongsTo(Role::class);
 }
 public function institution()
 {

@@ -16,6 +16,10 @@ public function groups()
   return $this->hasMany(Group::class, "institution_id");
 }
 
+public function users()
+{
+  return $this->hasMany(User::class, "institution_id");
+}
 
 
 

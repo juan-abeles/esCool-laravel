@@ -26,3 +26,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Admin
 
 Route::post('/courses', 'GroupController@store')->name('group_store');
+
+Route::post('/attendance', 'AttendanceController@store')->name('attendance_store');
