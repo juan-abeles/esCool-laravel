@@ -4,7 +4,7 @@
   <div>
 
 
-{{App\User::find(1)->institution}}
+{{-- {{App\User::find(1)->institution}} --}}
 
 
 
