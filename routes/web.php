@@ -28,3 +28,5 @@ Route::post('/grades', 'GradeController@store')->name('grade_store');
 
 // Admin
 Route::post('/courses', 'GroupController@store')->name('group_store');
+
+Route::post('/attendance', 'AttendanceController@store')->name('attendance_store');
