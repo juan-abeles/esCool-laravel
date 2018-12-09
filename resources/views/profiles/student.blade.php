@@ -4,7 +4,7 @@
 	<div class="col-lg-2">
     <nav class="nav-sidebar">
 		<ul class="nav tabs">
-          <li class="btn btn-secondary"><a href="#tab1" data-toggle="tab">Clases</a></li>
+          <li class="btn btn-secondary"><a href="#tab1" data-toggle="tab">Calificaciones</a></li>
           <li class="btn btn-secondary"><a href="#tab2" data-toggle="tab">Asistencia</a></li>
           <li class="btn btn-secondary"><a href="#tab3" data-toggle="tab">Comunicacion</a></li>
 		</ul>
@@ -15,10 +15,32 @@
 <!-- tab content -->
 <div class="tab-content">
 <div class="tab-pane active text-style" id="tab1">
-  <h2>Clases</h2>
+  <h2>Calificaciones</h2>
        <p>
-         En esta sección podrás encontrar tus evaluaciones y calificaciones para las materias que estés cursando, junto con toda otra información que el profesor de cada materia desee compartir.
+         En esta sección podrás encontrar tus calificaciones para las materias que estés cursando.
        </p>
+
+       <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Título</th>
+              <th scope="col">Nota</th>
+              <th scope="col">Materia</th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach (App\Grade::all() as $grade)
+              @if ($grade->user_id === Auth::user()->id)
+                <tr>
+                  <td>{{$grade->name}}</td>
+                  <td>{{$grade->value}}</td>
+                  <td>{{$grade->subject->name}}</td>
+                </tr>
+              @endif
+            @endforeach
+            
+          </tbody>
+        </table>
 
 </div>
 <div class="tab-pane text-style" id="tab2">

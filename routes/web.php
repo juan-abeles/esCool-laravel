@@ -23,6 +23,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-// Admin
+// Teacher
+Route::post('/grades', 'GradeController@store')->name('grade_store');
 
+// Admin
 Route::post('/courses', 'GroupController@store')->name('group_store');
