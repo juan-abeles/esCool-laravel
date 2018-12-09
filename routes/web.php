@@ -26,7 +26,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Teacher
 Route::post('/grades', 'GradeController@store')->name('grade_store');
 
+Route::post('/attendance', 'AttendanceController@store')->name('attendance_store');
+
+Route::post('/communication', 'CommunicationController@store')->name('communication_store');
+
 // Admin
 Route::post('/courses', 'GroupController@store')->name('group_store');
-
-Route::post('/attendance', 'AttendanceController@store')->name('attendance_store');

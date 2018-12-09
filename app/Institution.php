@@ -21,6 +21,11 @@ public function users()
   return $this->hasMany(User::class, "institution_id");
 }
 
+public function communications()
+{
+  return $this->hasMany(Communication::class, "institution_id");
+}
+
 
 
 }

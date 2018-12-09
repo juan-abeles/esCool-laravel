@@ -39,21 +39,28 @@
     <button class="btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
       Agregar calificacion
     </button>
-    
+
     <div class="collapse" id="collapseExample">
       <div class="card card-body">
         <form class="" action="{{route("grade_store")}}" method="post">
           {{ csrf_field() }}
           <div class="form-group row">
             <div class="col-md-6">
+
               <label for="user_id">Alumno</label>
               <select class="form-control" name="user_id">
                 <option value="" disabled selected hidden>Seleccione alumno...</option>
-                @foreach (App\User::all() as $user)
+                {{-- @foreach (App\User::all() as $user)
                   @if ($user->role->name === "Alumno")
                   <option value="{{$user->id}}">{{$user->name}}</option>
                   @endif
-                  @endforeach
+                  @endforeach --}}
+									@foreach ($user->institution->users as $userR)
+										@if ($userR->role->name === "Alumno")
+										<option value="{{$userR->id}}">{{$userR->name . " " . $userR->last_name}} </option>
+										@endif
+									@endforeach
+
               </select>
             </div>
 
@@ -65,13 +72,13 @@
                   <option value="{{$subject->id}}">{{$subject->name}}</option>
                 @endforeach
               </select>
-            </div> 
+            </div>
           </div>
 
           <div class="form-group row">
             <div class="col-md-6">
               <label for="value">Calificación</label>
-              <input type="number" name="value" value="" placeholder="10">
+              <input type="number" name="value" value="" placeholder="10" max="10">
             </div>
 
             <div class="col-md-6">
@@ -94,26 +101,49 @@
    <button class="btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
     Cargar falta
   </button>
-  
+
   <div class="collapse" id="collapseExample">
     <div class="card card-body">
       <form class="" action="{{route("attendance_store")}}" method="post">
         {{ csrf_field() }}
         <label for="user_id">Nombre completo del alumno</label>
-        <select class="form-control col-md-6" name="user_id"> 
-            @foreach (Auth::user()->institution->users as $user)
-            @if ($user->role_id === 4)
-        <option value="{{$user->id}}"> {{$user->name .' '. $user->last_name}} </option>
-            @endif
-          @endforeach
-        </select>
+				<select class="form-control" name="user_id">
+					<option value="" disabled selected hidden>Seleccione alumno...</option>
+					{{-- @foreach (App\User::all() as $user)
+						@if ($user->role->name === "Alumno")
+						<option value="{{$user->id}}">{{$user->name}}</option>
+						@endif
+						@endforeach --}}
+						@foreach ($user->institution->users as $userR)
+							@if ($userR->role->name === "Alumno")
+							<option value="{{$userR->id}}">{{$userR->name . " " . $userR->last_name}} </option>
+							@endif
+						@endforeach
+
+				</select>
+
+				<br>
+
+
+				<label for="date">Fecha</label>
+
+				<input class="form-control col-md-6" type="date" name="date" value="">
+
+				<br>
+
+				<br>
+
 
         <select class="form-control col-md-6" name="value">
-            <option value="1">Presente</option>
-            <option value="2">Tarde</option>
-            <option value="3">Ausente</option>
-        </select>  
+            <option value="Presente">Presente</option>
+            <option value="Tarde">Tarde</option>
+            <option value="Ausente">Ausente</option>
+        </select>
         <br>
+
+
+
+
         <button type="submit" name="button">Cargar falta</button>
       </form>
     </div>
@@ -124,7 +154,29 @@
 <div class="tab-pane text-style" id="tab3">
   <h2>Comunicaciones</h2>
   <p>En esta sección podrás escribir mensajes y enviarlos a grupos de alumnos o alumnos individuales.</p>
+	<div class="card card-body">
+		<form class="" action="{{route("communication_store")}}" method="post">
+			{{ csrf_field() }}
+			<label for="subject">Asunto:</label>
+			<br>
+			<input type="text" name="subject" value="">
 
+			<br>
+			<br>
+
+
+			<label for="content">Mensaje:</label>
+			<br>
+			
+			<textarea name="content" rows="10" cols="80"></textarea>
+			<br>
+
+
+
+
+			<button type="submit" name="button">Publicar Mensaje</button>
+		</form>
+	</div>
     <div class="col-xs-6 col-md-3">
   </div>
 </div>

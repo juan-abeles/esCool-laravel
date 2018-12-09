@@ -8,6 +8,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Genre;
 use App\Role;
 use App\Institution;
+use App\Grade;
+use App\Attendance;
 
 class User extends Authenticatable
 {
@@ -45,5 +47,14 @@ public function institution()
   return $this->belongsTo(Institution::class);
 }
 
+public function grades()
+{
+  return $this->hasMany(Grade::class, 'user_id');
+}
+
+public function attendances()
+{
+  return $this->hasMany(Attendance::class, 'student_id', 'id');
+}
 
 }
