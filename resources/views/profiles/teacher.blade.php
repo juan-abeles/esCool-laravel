@@ -33,8 +33,8 @@
             @endforeach
         </ul>
     </div>
-    @endif
     <br>
+    @endif
 
     <button class="btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
       Agregar calificacion
@@ -95,7 +95,7 @@
 </div>
 <div class="tab-pane text-style" id="tab2">
   <h2>Asistencia</h2>
-   <p>En esta sección podrás visualizar el registro de las asistencias e inasistencias de tus alumnos por fecha.</p>
+   <p>En esta sección podrás cargar asistencias e inasistencias de tus alumnos por fecha.</p>
 
 
    <button class="btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
@@ -144,7 +144,7 @@
 
 
 
-        <button type="submit" name="button">Cargar falta</button>
+        <button type="submit" name="button" class="btn btn-primary">Cargar falta</button>
       </form>
     </div>
   </div>
@@ -153,7 +153,7 @@
 </div>
 <div class="tab-pane text-style" id="tab3">
   <h2>Comunicaciones</h2>
-  <p>En esta sección podrás escribir mensajes y enviarlos a grupos de alumnos o alumnos individuales.</p>
+  <p>En esta sección podrás escribir mensajes y enviarlos a tus alumnos.</p>
 	<div class="card card-body">
 		<form class="" action="{{route("communication_store")}}" method="post">
 			{{ csrf_field() }}
@@ -168,13 +168,13 @@
 			<label for="content">Mensaje:</label>
 			<br>
 			
-			<textarea name="content" rows="10" cols="80"></textarea>
+			<textarea name="content" rows="10" cols="77"></textarea>
 			<br>
 
 
 
-
-			<button type="submit" name="button">Publicar Mensaje</button>
+      <br>
+			<button type="submit" name="button" class="btn btn-primary">Publicar Mensaje</button>
 		</form>
 	</div>
     <div class="col-xs-6 col-md-3">

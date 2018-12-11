@@ -23,7 +23,7 @@
 </div>
 <div class="tab-pane text-style" id="tab2">
   <h2>Asistencia</h2>
-   <p>En esta sección podrás visualizar el registro de tus asistencias e inasistencias de tus hijos.</p>
+   <p>En esta sección podrás visualizar el registro de las asistencias e inasistencias de tus hijos.</p>
 
 
 </div>
