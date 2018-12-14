@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Attendance extends Model
+class Subject extends Model
 {
     protected $fillable = [
-        'value', 'student_id', 'date'
+        'name',
     ];
 }

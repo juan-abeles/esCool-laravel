@@ -4,7 +4,7 @@
 	<div class="col-lg-2">
     <nav class="nav-sidebar">
 		<ul class="nav tabs">
-          <li class="btn btn-secondary"><a href="#tab1" data-toggle="tab">Clases</a></li>
+          <li class="btn btn-secondary"><a href="#tab1" data-toggle="tab">Calificaciones</a></li>
           <li class="btn btn-secondary"><a href="#tab2" data-toggle="tab">Asistencia</a></li>
           <li class="btn btn-secondary"><a href="#tab3" data-toggle="tab">Comunicacion</a></li>
 		</ul>
@@ -15,15 +15,15 @@
 <!-- tab content -->
 <div class="tab-content">
 <div class="tab-pane active text-style" id="tab1">
-  <h2>Clases</h2>
+  <h2>Calificaciones</h2>
        <p>
-         En esta sección podrás encontrar las evaluaciones y calificaciones de las materias que estén cursando tus hijos.
+         En esta sección podrás encontrar las calificaciones de las materias que estén cursando tus hijos.
        </p>
 
 </div>
 <div class="tab-pane text-style" id="tab2">
   <h2>Asistencia</h2>
-   <p>En esta sección podrás visualizar el registro de tus asistencias e inasistencias de tus hijos.</p>
+   <p>En esta sección podrás visualizar el registro de las asistencias e inasistencias de tus hijos.</p>
 
 
 </div>

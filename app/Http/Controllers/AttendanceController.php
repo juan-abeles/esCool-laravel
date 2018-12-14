@@ -11,9 +11,9 @@ class AttendanceController extends Controller
     public function store(Request $request)
     {
       $attendance = new Attendance();
-
       $attendance->value = $request->value;
       $attendance->student_id = $request->user_id;
+      $attendance->date = $request->date;
       $save = $attendance->save();
       if ($save) {
         $request->session()->flash('alert-success', 'Added Succesfully!');

@@ -53,7 +53,7 @@
             <a href="http://cmb.org.ar" target="_blank"><img class="d-block" src="{{asset('img/cmb.png')}}" alt="cmb"></a>
           </article>
           <article>
-            <a href="http://colegioesclavas.edu.ar" target="_blank"><img class="d-block" src="{{asset('img/cmb.png')}}" alt="esclavas"></a>
+            <a href="http://colegioesclavas.edu.ar" target="_blank"><img class="d-block" src="{{asset('img/esclavas.png')}}" alt="esclavas"></a>
           </article>
           <article>
             <a href="http://colegiosanagustin.com.ar" target="_blank"><img class="d-block" src="{{asset('img/sanagustin.png')}}" alt="sanagustin"></a>

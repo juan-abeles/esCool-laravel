@@ -2,7 +2,9 @@
 
 @section('content')
   <div>
-
+    @php
+      $user = Auth::user();
+    @endphp
     @if (session('status'))
       <div class="alert alert-success" role="alert">
         {{ session('status') }}
@@ -16,7 +18,7 @@
     @endif
 
 
-    @switch(Auth::user()->role->name)
+    @switch($user->role->name)
       @case("Alumno")
       @include('profiles.student')
       @break
@@ -32,7 +34,6 @@
       @case("Administrador")
       @include('profiles.admin')
       @break
-
 
       @default
       <span>Something went wrong, please try again</span>
