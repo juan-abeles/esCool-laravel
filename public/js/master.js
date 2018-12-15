@@ -23,10 +23,6 @@ window.onload = function (){
 
     function validarEmail(email){
         var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/
-        //if(re.test(email)) return true
-        //alert("Debes colocar un email válido")
-        //return false
-        
         var error = document.getElementById("errorEmail")
         if (!re.test(email)){
             error.innerHTML="Debes colocar un email válido"
